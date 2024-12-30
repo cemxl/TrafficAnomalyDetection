@@ -127,24 +127,39 @@ File Structure
 TrafficAnomalyProject/
 
 ├── .gitignore
+
 ├── traffic_output.xml       # SUMO simulation output
+
 ├── traffic_data.csv         # Processed traffic data
+
 ├── traffic_anomalies.csv    # Detected anomalies
+
 ├── detect_anomalies_rule_based.py   # Rule-based anomaly detection
+
 ├── detect_anomalies_ml.py           # ML-based anomaly detection
+
 ├── visualize_traffic_data.py        # Interactive graphs
+
 ├── normalize_traffic_features.py    # Preprocesses features
+
 ├── TrafficAnomalyProject.net.xml   # Road network file
+
 ├── TrafficAnomalyProject.rou.xml   # Route file for vehicles
+
 ├── simulation.sumocfg              # Simulation configuration
+
 ├── README.md                       # Project documentation
 
 
 
 Future Work
+
 Integrate real-world IoV data for more realistic anomaly detection.
 Add real-time traffic monitoring using TraCI.
 Expand the road network to include multi-lane highways, weather effects, and collisions.
 Explore advanced ML models (e.g., LSTMs) for time-series anomaly detection.
+
+
 Acknowledgments
+
 This project is inspired by the research paper: "Deep Learning-Based Anomaly Detection for Fog-Assisted IoVs Networks".
