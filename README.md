@@ -125,17 +125,30 @@ python visualize_traffic_data.py
 File Structure
 
 TrafficAnomalyProject/
+├── .gitignore
+
 ├── traffic_output.xml       # SUMO simulation output
+
 ├── traffic_data.csv         # Processed traffic data
+
 ├── traffic_anomalies.csv    # Detected anomalies
+
 ├── detect_anomalies_rule_based.py   # Rule-based anomaly detection
+
 ├── detect_anomalies_ml.py           # ML-based anomaly detection
+
 ├── visualize_traffic_data.py        # Interactive graphs
+
 ├── normalize_traffic_features.py    # Preprocesses features
+
 ├── TrafficAnomalyProject.net.xml   # Road network file
+
 ├── TrafficAnomalyProject.rou.xml   # Route file for vehicles
+
 ├── simulation.sumocfg              # Simulation configuration
+
 ├── README.md                       # Project documentation
+
 
 
 Future Work
