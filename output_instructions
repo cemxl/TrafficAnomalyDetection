@@ -1,0 +1,15 @@
+cd "C:\Users\Cemal Fathima\OneDrive\Desktop\TrafficAnomalyProject"
+python convert_xml_to_csv.py
+sumo-gui -c simulation.sumocfg
+python convert_xml_to_csv.py
+python visualize_traffic_data.py
+python parse_traffic_data.py
+python convert_to_csv.py
+python detect_anomalies.py
+python normalize_traffic_features.py
+python train_traffic_autoencoder.py
+python visualize_detected_anomalies.py
+python visualize_traffic_data.py
+python visualize_detected_anomalies.py
+python interactive_graph.py
+python real_time_visuals.py

@@ -1,0 +1,33 @@
+import xml.etree.ElementTree as ET
+import csv
+
+# Step 1: Parse XML file
+tree = ET.parse('simulation_output.xml')
+root = tree.getroot()
+
+# Step 2: Check root and first few tags
+print("Root element:", root.tag)
+print("First child of root:", root[0].tag if len(root) > 0 else "No children")
+
+# Step 3: Open CSV file for writing
+with open('output.csv', mode='w', newline='') as file:
+    writer = csv.writer(file)
+    
+    # Step 4: Write the CSV header
+    writer.writerow(['vehicle_id', 'type', 'position', 'speed'])  # Modify based on your XML's tags
+    
+    # Step 5: Iterate over all vehicle elements
+    for vehicle in root.findall('.//vehicle'):  # Adjust XPath if needed
+        vehicle_id = vehicle.get('id')  # Make sure to use correct attribute name
+        vehicle_type = vehicle.get('type')  # Same here
+        position = vehicle.get('position')  # Ensure position tag exists
+        speed = vehicle.get('speed')  # Ensure speed tag exists
+        
+        # Debugging: Print values for each vehicle
+        print(f"Vehicle ID: {vehicle_id}, Type: {vehicle_type}, Position: {position}, Speed: {speed}")
+        
+        # Step 6: Write to CSV if values are found
+        if vehicle_id and vehicle_type and position and speed:
+            writer.writerow([vehicle_id, vehicle_type, position, speed])
+        else:
+            print("Warning: Missing data for vehicle, skipping.")
